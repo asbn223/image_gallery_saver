@@ -1,29 +1,24 @@
 package com.example.imagegallerysaver
 
-import androidx.annotation.NonNull
-import android.annotation.TargetApi
 import android.content.ContentValues
 import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
-import android.media.MediaScannerConnection
 import android.net.Uri
-import android.os.Environment
 import android.os.Build
+import android.os.Environment
 import android.provider.MediaStore
+import android.text.TextUtils
+import android.webkit.MimeTypeMap
+import androidx.annotation.NonNull
 import io.flutter.embedding.engine.plugins.FlutterPlugin
-import io.flutter.plugin.common.BinaryMessenger
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
-import io.flutter.plugin.common.MethodChannel.Result
-import io.flutter.plugin.common.PluginRegistry.Registrar
 import java.io.File
 import java.io.FileInputStream
 import java.io.IOException
-import android.text.TextUtils
-import android.webkit.MimeTypeMap
 import java.io.OutputStream
 
 class ImageGallerySaverPlugin : FlutterPlugin, MethodCallHandler {
